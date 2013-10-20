@@ -1,0 +1,12 @@
+	Интересный эффект шипастых деревьев
+	//линия деревьев
+    glBegin(GL_QUADS);
+        glColor3f(0.24, 0.66, 0.24); //травяной
+        for(int i = 0, j = 0; i <= wWidth; i += 5, ++j)
+        {
+            glVertex2f(i, wHeight * 0.1);
+            glVertex2f(i, wHeight * 0.75 + wHeight * 0.07 * sin(0.18 * j));
+            glVertex2f(i + 5.0, 284.0 + 28.0 * sin(0.18 * (j + 1)));
+            glVertex2f(i + 5.0, 40.0);
+        }
+    glEnd();
